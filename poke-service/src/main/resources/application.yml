@@ -1,0 +1,13 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /api/v1
+
+API_URL: https://pokeapi.co/api/v2/pokemon?offset={offset}&limit={limit}
+spring:
+  application:
+    name: poke-service
+
+logging:
+  level:
+    web: debug

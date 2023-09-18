@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  poke-service:
+    build:
+      context: ./poke-service
+      dockerfile: Dockerfile
+    container_name: poke-service
+    environment:
+      API_URL: https://pokeapi.co/api/v2/pokemon?offset={offset}&limit={limit}
+    networks:
+      - poke_network
+  gateway:
+    container_name: gateway
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    ports:
+      - '8082:8082'
+    networks:
+      - poke_network
+networks:
+  poke_network:
+    driver: bridge
+    name: poke_network
