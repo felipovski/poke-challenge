@@ -36,7 +36,7 @@ Two endpoints will be available:
 - /pokemons/highlight?query=&sort=
 
 in the local URI:
-- http://localhost:8082 **
+- http://localhost:8082/api/v1 **
 
 ** Note: Since we are not exposing the Poke Service, all requests should be done to gateway service
 
