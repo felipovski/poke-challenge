@@ -1,7 +1,7 @@
 package com.github.felipovski.pokeservice.boundary;
 
 import com.github.felipovski.pokeservice.entity.dto.PokeResponseDto;
-import com.github.felipovski.pokeservice.service.PokeService;
+import com.github.felipovski.pokeservice.control.PokeService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

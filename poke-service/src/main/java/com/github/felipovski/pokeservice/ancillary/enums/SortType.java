@@ -1,6 +1,6 @@
 package com.github.felipovski.pokeservice.ancillary.enums;
 
-import com.github.felipovski.pokeservice.service.exception.IllegalSortingTypeException;
+import com.github.felipovski.pokeservice.control.exception.IllegalSortingTypeException;
 
 import java.util.Arrays;
 

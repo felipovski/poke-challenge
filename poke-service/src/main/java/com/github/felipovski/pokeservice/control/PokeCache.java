@@ -1,4 +1,4 @@
-package com.github.felipovski.pokeservice.service;
+package com.github.felipovski.pokeservice.control;
 
 import com.github.felipovski.pokeservice.entity.dto.PokeApiDto;
 import jakarta.annotation.PostConstruct;

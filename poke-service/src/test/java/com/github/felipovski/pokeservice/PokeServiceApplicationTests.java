@@ -3,7 +3,7 @@ package com.github.felipovski.pokeservice;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.felipovski.pokeservice.entity.dto.PokeApiDto;
 import com.github.felipovski.pokeservice.entity.dto.PokeResponseDto;
-import com.github.felipovski.pokeservice.service.exception.handler.ApiErrorResponse;
+import com.github.felipovski.pokeservice.control.exception.handler.ApiErrorResponse;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.test.context.ActiveProfiles;
 import java.io.IOException;
 
-import static com.github.felipovski.pokeservice.service.PokeCache.cache;
+import static com.github.felipovski.pokeservice.control.PokeCache.cache;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.*;
 

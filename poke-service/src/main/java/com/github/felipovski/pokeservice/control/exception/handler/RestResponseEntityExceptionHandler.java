@@ -1,6 +1,6 @@
-package com.github.felipovski.pokeservice.service.exception.handler;
+package com.github.felipovski.pokeservice.control.exception.handler;
 
-import com.github.felipovski.pokeservice.service.exception.CustomException;
+import com.github.felipovski.pokeservice.control.exception.CustomException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

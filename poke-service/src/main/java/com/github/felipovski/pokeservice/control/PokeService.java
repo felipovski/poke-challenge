@@ -1,4 +1,4 @@
-package com.github.felipovski.pokeservice.service;
+package com.github.felipovski.pokeservice.control;
 
 import com.github.felipovski.pokeservice.ancillary.enums.SortType;
 import com.github.felipovski.pokeservice.entity.dto.PokeApiDto;
@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.function.*;
 
 import static com.github.felipovski.pokeservice.ancillary.SortUtils.sort;
-import static com.github.felipovski.pokeservice.service.PokeCache.cache;
+import static com.github.felipovski.pokeservice.control.PokeCache.cache;
 
 @Service
 public class PokeService {

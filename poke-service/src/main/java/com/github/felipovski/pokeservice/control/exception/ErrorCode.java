@@ -1,4 +1,4 @@
-package com.github.felipovski.pokeservice.service.exception;
+package com.github.felipovski.pokeservice.control.exception;
 
 public enum ErrorCode {
 

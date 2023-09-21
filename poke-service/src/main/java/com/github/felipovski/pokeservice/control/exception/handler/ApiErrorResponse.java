@@ -1,4 +1,4 @@
-package com.github.felipovski.pokeservice.service.exception.handler;
+package com.github.felipovski.pokeservice.control.exception.handler;
 
 import java.time.LocalDateTime;
 
