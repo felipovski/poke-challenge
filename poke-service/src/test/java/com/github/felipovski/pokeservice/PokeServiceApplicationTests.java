@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.test.context.ActiveProfiles;
 import java.io.IOException;
 
-import static com.github.felipovski.pokeservice.control.PokeCache.cache;
+import static com.github.felipovski.pokeservice.control.cache.PokeCache.cache;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.*;
 

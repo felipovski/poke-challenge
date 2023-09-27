@@ -1,15 +1,14 @@
-package com.github.felipovski.pokeservice.ancillary;
+package com.github.felipovski.pokeservice.control.sort;
 
 import com.github.felipovski.pokeservice.ancillary.enums.SortType;
 import com.github.felipovski.pokeservice.entity.dto.PokemonDto;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SortUtils {
-
-    private SortUtils() {
-    }
+@Component
+public interface PokeSort {
 
     /**
      * Sorts the list of PokemonDto based on the provided SortType.
@@ -24,7 +23,7 @@ public class SortUtils {
      * @param sortType The sort type.
      * @return Sorted PokemonDto list.
      */
-    public static List<PokemonDto> sort(List<PokemonDto> pokemons, SortType sortType) {
+    default List<PokemonDto> sort(List<PokemonDto> pokemons, SortType sortType) {
         // Check whether Pokémon list is null or has size 0 or 1
         // if that is the case, returns the list
         if (pokemons == null || pokemons.size() <= 1) {
@@ -41,7 +40,7 @@ public class SortUtils {
         return merge(left, right, sortType);
     }
 
-    private static List<PokemonDto> merge(List<PokemonDto> left, List<PokemonDto> right, SortType sortType) {
+    default List<PokemonDto> merge(List<PokemonDto> left, List<PokemonDto> right, SortType sortType) {
         List<PokemonDto> result = new ArrayList<>();
         int a = 0;
         int b = 0;

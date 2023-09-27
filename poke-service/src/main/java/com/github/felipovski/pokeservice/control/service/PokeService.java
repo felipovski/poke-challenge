@@ -1,6 +1,7 @@
-package com.github.felipovski.pokeservice.control;
+package com.github.felipovski.pokeservice.control.service;
 
 import com.github.felipovski.pokeservice.ancillary.enums.SortType;
+import com.github.felipovski.pokeservice.control.sort.PokeSort;
 import com.github.felipovski.pokeservice.entity.dto.PokeApiDto;
 import com.github.felipovski.pokeservice.entity.dto.PokeResponseDto;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,19 +11,20 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Optional;
 import java.util.function.*;
 
-import static com.github.felipovski.pokeservice.ancillary.SortUtils.sort;
-import static com.github.felipovski.pokeservice.control.PokeCache.cache;
+import static com.github.felipovski.pokeservice.control.cache.PokeCache.cache;
 
 @Service
 public class PokeService {
 
     private final RestTemplate restTemplate;
+    private final PokeSort pokeSort;
 
     @Value("${API_URL}")
     private String apiUrl;
 
-    public PokeService(RestTemplate restTemplate) {
+    public PokeService(RestTemplate restTemplate, PokeSort pokeSort) {
         this.restTemplate = restTemplate;
+        this.pokeSort = pokeSort;
     }
 
     public PokeResponseDto getSortedListByQuery(Optional<String> query,
@@ -37,7 +39,7 @@ public class PokeService {
         var sortType = sort.map(str -> SortType.findByType(str.toLowerCase()))
                 .orElse(null);
 
-        var sorted = sort(filtered, sortType);
+        var sorted = pokeSort.sort(filtered, sortType);
 
         var response = new PokeResponseDto();
         response.setResult(sorted);

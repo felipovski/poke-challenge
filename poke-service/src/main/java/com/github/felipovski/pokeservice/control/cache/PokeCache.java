@@ -1,5 +1,6 @@
-package com.github.felipovski.pokeservice.control;
+package com.github.felipovski.pokeservice.control.cache;
 
+import com.github.felipovski.pokeservice.control.service.PokeService;
 import com.github.felipovski.pokeservice.entity.dto.PokeApiDto;
 import jakarta.annotation.PostConstruct;
 import org.springframework.context.annotation.Profile;
